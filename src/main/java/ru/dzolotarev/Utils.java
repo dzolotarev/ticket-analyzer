@@ -11,6 +11,6 @@ public class Utils {
     }
 
     public static void print(Double value) {
-        System.out.println(value.toString());
+        System.out.println(value);
     }
 }

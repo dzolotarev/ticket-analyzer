@@ -46,6 +46,7 @@ public class TicketListBuilder {
                     .min()
                     .orElse( 0);
 
+            // ToDo Очень топорно. Надо доработать =!
             String timeTo = String.format("%d:%02d", time / 60, time % 60);
             System.out.println(timeTo);
 
