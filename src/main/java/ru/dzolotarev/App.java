@@ -3,14 +3,12 @@ package ru.dzolotarev;
 import java.io.File;
 import java.io.IOException;
 
-import static java.util.Objects.isNull;
-
 /**
  * Ticket Analyzer Simple App
  */
 public class App {
     public static void main(String[] args) throws IOException {
-        if (isNull(args[0])) {
+        if (args.length == 0) {
             throw new IllegalArgumentException("File can not be empty!");
         }
 
