@@ -18,9 +18,14 @@ import java.time.LocalTime;
 @ToString
 public class Ticket implements Serializable {
     private String origin;
-    private String origin_name;
+
+    @JsonProperty("origin_name")
+    private String originName;
+
     private String destination;
-    private String destination_name;
+
+    @JsonProperty("destination_name")
+    private String destinationName;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yy")
     @JsonDeserialize(using = LocalDateDeserializer.class)
