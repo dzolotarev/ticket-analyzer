@@ -1,7 +1,6 @@
 package ru.dzolotarev;
 
 import com.google.common.math.Quantiles;
-import com.google.common.math.Stats;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +35,11 @@ public class TicketService {
                 .map(Ticket::getPrice)
                 .toList();
 
-        return Stats.meanOf(ticketListPrices) - Quantiles.median().compute(ticketListPrices);
+        ////Такой вариант дает погрешность окргления
+        // Stats.meanOf(ticketListPrices);
+
+        return ticketListPrices.stream()
+                .mapToDouble(a -> a)
+                .average().orElse(0) - Quantiles.median().compute(ticketListPrices);
     }
 }

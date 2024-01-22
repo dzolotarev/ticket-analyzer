@@ -14,4 +14,4 @@
 4. 8:05 - Ticket(origin=VVO, origin_name=Владивосток, destination=TLV, destination_name=Тель-Авив, departureDate=2018-05-12, departureTime=12:10, arrivalDate=2018-05-12, arrivalTime=20:15, carrier=BA, stops=3, price=13400.0)
 
 #### Разница между средней ценой и медианой для полета между городами  Владивосток и Тель-Авив:
-* 459.9999999999982
+* 460
